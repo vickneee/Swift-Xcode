@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+struct Player: Identifiable {
+    let id = UUID()
+    
+    var name:  String
+    var score: Int
+    
+    init(name: String, score: Int) {
+        self.name = name
+        self.score = score
+    }
+    
+    mutating func addScore(_ score: Int) {
+        self.score += score
+    }
+}
